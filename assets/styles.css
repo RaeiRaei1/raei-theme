@@ -1,0 +1,50 @@
+/* Base styles for Raei */
+
+@font-face {
+  font-family: 'Tex Gyre Bonum';
+  src: url('{{ "texgyrebonum-regular.woff2" | asset_url }}') format('woff2'),
+       url('{{ "texgyrebonum-regular.woff" | asset_url }}') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Tex Gyre Bonum', Georgia, serif;
+  background-color: #FAF6F0;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+button {
+  border: 1px solid #222;
+  background: transparent;
+  padding: 10px 20px;
+  font-family: 'Tex Gyre Bonum', Georgia, serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.section {
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
