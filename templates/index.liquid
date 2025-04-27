@@ -1,17 +1,24 @@
-{% comment %} Home Page Template for Raei (Boutique Version) {% endcomment %}
+{% comment %} Raei Boutique Homepage Template {% endcomment %}
 
-<div class="section fade-in">
+<div class="fade-in">
   {% section 'hero-banner' %}
 </div>
 
-<div class="section fade-in">
+<div class="section fade-in" style="text-align:center; padding:100px 20px;">
+  <h2>about raei</h2>
+  <p style="max-width:700px;margin:20px auto;">raei was created with the belief that everyday essentials should feel anything but ordinary. thoughtfully designed to move with you, every piece is made for comfort, function, and effortless style.</p>
+</div>
+
+<div class="section fade-in" style="text-align:center; padding:100px 20px;">
+  <h2>the nest tote</h2>
+  <p style="max-width:700px;margin:20px auto;">soft. structured. slouchy. meet your everywhere bag — made for daily life, travel, and everything in between.</p>
+  <img src="{{ 'hero-nest-tote.jpg' | asset_url }}" alt="The Nest Tote" style="max-width:400px;width:100%;margin:40px auto 0;">
+</div>
+
+<div class="fade-in">
   {% section 'featured-product' %}
 </div>
 
-<div class="section fade-in">
+<div class="fade-in">
   {% section 'newsletter-signup' %}
-</div>
-
-<div class="section fade-in">
-  {% section 'faq-accordion' %}
 </div>
