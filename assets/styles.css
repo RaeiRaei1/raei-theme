@@ -1,5 +1,6 @@
-/* Base styles for Raei */
+/* Raei Boutique Styles */
 
+/* Font Setup */
 @font-face {
   font-family: 'Tex Gyre Bonum';
   src: url('{{ "texgyrebonum-regular.woff2" | asset_url }}') format('woff2'),
@@ -14,6 +15,24 @@ body {
   font-family: 'Tex Gyre Bonum', Georgia, serif;
   background-color: #FAF6F0;
   color: #222;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 a {
@@ -21,17 +40,24 @@ a {
   color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
+.section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 button {
   border: 1px solid #222;
   background: transparent;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-family: 'Tex Gyre Bonum', Georgia, serif;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 button:hover {
@@ -39,12 +65,39 @@ button:hover {
   color: #fff;
 }
 
-.section {
-  padding: 40px 20px;
+/* Header */
+header a {
+  font-size: 28px;
+  letter-spacing: 1px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Moving Banner */
+.moving-banner {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #FAF6F0;
+  color: #222;
+  font-family: 'Tex Gyre Bonum', Georgia, serif;
+  font-size: 18px;
+  padding: 10px 0;
+  text-transform: lowercase;
+}
+.marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
