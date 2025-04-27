@@ -31,3 +31,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+// Fade-in on Scroll Animation
+document.addEventListener("DOMContentLoaded", function() {
+  var fadeEls = document.querySelectorAll('.fade-in');
+  function checkFade() {
+    fadeEls.forEach(function(el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top <= window.innerHeight - 100) {
+        el.classList.add('show');
+      }
+    });
+  }
+  window.addEventListener('scroll', checkFade);
+  checkFade(); // trigger initial check in case items are already visible
+});
