@@ -1,0 +1,26 @@
+{% comment %} Moving "Launching Soon" banner {% endcomment %}
+<div class="moving-banner">
+  <div class="marquee">
+    <p>launching soon • launching soon • launching soon • launching soon •</p>
+  </div>
+</div>
+
+<style>
+.moving-banner {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #FAF6F0;
+  color: #222;
+  font-family: 'Tex Gyre Bonum', Georgia, serif;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+</style>
