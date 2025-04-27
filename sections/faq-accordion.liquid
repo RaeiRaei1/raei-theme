@@ -1,0 +1,49 @@
+{% comment %} FAQ Accordion Section {% endcomment %}
+<div class="section faq-section">
+  <h2>frequently asked questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">how long does shipping take?</button>
+    <div class="faq-answer">
+      <p>Shipping usually takes 3–7 business days depending on your location.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">is the bag waterproof?</button>
+    <div class="faq-answer">
+      <p>The nylon material is water-resistant and perfect for daily use.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">can I return my purchase?</button>
+    <div class="faq-answer">
+      <p>Yes, we offer returns within 30 days if the bag is unused and in original condition.</p>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.faq-item {
+  margin-bottom: 10px;
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 18px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-question.active + .faq-answer {
+  max-height: 200px;
+}
+</style>
