@@ -1,0 +1,17 @@
+{% comment %} Contact Page Template for Raei {% endcomment %}
+
+<div class="section contact-page" style="text-align: center;">
+  <h1>contact us</h1>
+
+  <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form">
+    <input type="hidden" name="form_type" value="contact" />
+    
+    <input type="text" name="contact[name]" placeholder="Your name" required style="width:100%;padding:10px;margin-bottom:10px;">
+    
+    <input type="email" name="contact[email]" placeholder="Your email" required style="width:100%;padding:10px;margin-bottom:10px;">
+    
+    <textarea name="contact[body]" placeholder="Your message" required style="width:100%;padding:10px;height:150px;margin-bottom:10px;"></textarea>
+    
+    <button type="submit" style="width:100%;">send</button>
+  </form>
+</div>
