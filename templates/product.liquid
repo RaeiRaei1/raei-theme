@@ -1,0 +1,23 @@
+{% comment %} Product Page Template for Raei {% endcomment %}
+
+<div class="section product-page" style="text-align: center;">
+  <h1>{{ product.title }}</h1>
+
+  <div style="margin:20px auto;">
+    <img src="{{ product.featured_image | img_url: '600x600' }}" alt="{{ product.title }}" style="max-width:300px;width:100%;">
+  </div>
+
+  <p>{{ product.price | money }}</p>
+
+  <form method="post" action="/cart/add">
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+    <button type="submit">add to cart</button>
+  </form>
+
+  <div class="section">
+    {{ product.description }}
+  </div>
+
+  {% section 'faq-accordion' %}
+
+</div>
